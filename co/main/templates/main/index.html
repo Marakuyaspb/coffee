@@ -1,0 +1,220 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+	<section class='anima'>
+		<h1>
+		  <span class="hash" aria-hidden="true">#</span>
+		  <span class="word">в наших жилах</span>
+		  <span class="word">КОФЕ</span>
+		  <span class="word">НЕ водица</span>
+		</h1>
+		<button>Перезапустить</button>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+	<script src="{% static 'script.js' %}"></script>
+
+
+	<section class='white_bg'>
+		<div class='w-80'>
+			
+			<div id='work' class=''>
+				<h2 class='brick'>Чем я могу быть полезна?</h1>
+
+				<div class='row'>
+					<div class='col-md-4'>
+						<h3 id='' class="orange mx-5 pt-5">Поиграть со шрифтами</h3>
+					</div>
+
+					<div class='hero col-md-4'>
+						<img class='img-fluid' src="{% static 'works/me_circle.png' %}">
+					</div>
+					
+					<div class='col-md-4'>
+						<h3 id='' class="pt-5 mx-5  brown">Внести правки в час ночи</h3>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section> 
+
+	<section class='brown white_bg'>
+		<div class='py-5 w-80'>
+
+			<div class='row'>
+				<div class =' col-md-6'>
+					<h3 class="brick">Могу сделать сайт:</h3>
+					<b><p class='pt-4'>→ Одностраничник</p></b>
+					<b><p>→ Сайт-визитку</p></b>
+					<b><p>→ Интернет-магазин</p></b>
+
+
+					<p class='pt-5'>Разработка веб-приложений на Django.
+					<p>Сборка сайтов на Wordpress и Tilda.
+					<p>Интеграция самописных модулей на Jacascript.
+					<p>Кастомизация дизайна веб-приложений (имела дело с Ruby on Rails, React, Elm)
+					<p>Настройка e-mail рассылок.
+
+					<p class='pt-5'>Думаю, читаю, пишу на Javascript и Python. Чуточку на PHP.
+
+				</div>
+				<div class ='col-md-6'>
+					<img class='img-fluid' src="{% static 'works/site_skill.png' %}">
+				</div>
+			</div>
+
+			<h3 class="brick">ТЫК:</h3>
+			<center>
+				<div class='row'>
+					<div class ='col-md-4'>
+						<p>Интернет-магазин</p>
+						<a target="_blank" rel="noopener noreferrer"  href='https://new.decona.ru'><div id='decona' class='my-2  show_site'></div></a>
+					</div>
+					<div class ='col-md-4'>
+						<p>Ещё интернет-магазин</p>
+						<a target="_blank" rel="noopener noreferrer"  href='https://acoustic-panel.cosca.ru'><div id='cosca' class='my-2 show_site'></div></a>
+					</div>
+
+					<div class ='col-md-4'>
+						<p>Лендинг</p>
+						<a href='https://kupina-realt.ru'><div id='kupina' class='my-2  show_site'></div></a>
+					</div>
+
+				</div>
+				<div class='row pt-3'>
+
+					<div class ='col-md-4'>
+						<p>Сайт стартапа</p>
+						<a target="_blank" rel="noopener noreferrer"  href='https://kvant-tochka.ru'><div id='kvantto' class='my-2  show_site'></div></a>
+					</div>
+
+					<div class ='col-md-4'>
+						<p>Сайт историко-патриотического проекта</p>
+						<a target="_blank" rel="noopener noreferrer"  href='https://%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B2%D0%BE%D0%BB%D1%88%D0%B5%D0%B1%D0%BD%D1%8B%D1%85%D0%BA%D0%BE%D1%80%D0%B0%D0%B1%D0%BB%D0%B5%D0%B9.%D1%80%D1%84'><div id='game' class='my-2  show_site'></div></a>
+					</div>
+
+					<div class ='col-md-4'>
+						<p>И ещё интернет-магазин</p>
+						<a href='https://spb-jara.net/'><div id='jara' class='my-2  show_site'></div></a>
+					</div>
+
+				</div>
+			</center>
+
+			<div class='row mt-5'>
+				<div class ='col-md-6 pt-4'>
+				
+					<h3 class="mt-5 brick">А ещё:</h3>
+					<p class='pt-4'>→ <b>Cделать презентацию проекта</b> с инфографикой.</p>
+					<p>→ <b>Нарисовать</b> логотип, принт для футболки или толстовки, иллюстрации.</p>
+					<p>Дизайн группы ВКонтакте, шапки для аккаунтов в социальных сетях.</p>
+					<p>Нарисовать слои для генерации NFT-коллекции.</p>
+					<p>→ <b>Сверстать</b> буклет, брошюру, флаер, афишу.</p>
+					<p class='pb-2'>→ <b>Сделать для видео</b> титры, субтитры, инфографику: *.png, *.mp4.</p>
+
+
+					<a target="_blank" rel="noopener noreferrer"  href='https://www.behance.net/bookannabook'><div class='my-5 white orange_bg more'>Посмотреть портфолио</div></a>
+
+				</div>
+
+				<div class =' col-md-6'>
+					<img class='img-fluid' src="{% static 'works/cat_head.png' %}">
+				</div>
+			</div>
+
+
+			
+			
+		</div>
+	</section>
+
+	<section class='white_bg'>
+		<div class='py-5 w-80'>
+			<div id='who' class=''>
+				
+				<div class='row'>
+					<div class =' col-md-6'>
+
+					  <h2 class='brick'>Кто я?</h1>
+					  	<br><br>
+					  	<p>Человек :)</p>
+					  	<br>
+					  	<p>Меня зовут Анна.</p>
+						<p>Занимаюсь графическим дизайном с 2010.</p>
+						<p>Свой первый сайт сделала в 2006.</p>
+						<p class='pb-5'>Рисую - сколько себя помню.</p>
+
+					</div>
+
+					<div class ='col-md-6'>
+
+					  <div class='scroll_it'>
+
+					    <div class='slides'>
+					    	<img src="{% static 'img/coffee.png' %}">
+					    </div>
+					    <div class='slides'>
+					    	<img src="{% static 'img/love.png' %}">
+					    </div>
+					    <div class='slides'>
+					    	<img src="{% static 'img/travel.png' %}">
+					    </div>
+					    <div class='slides'>
+					    	<img src="{% static 'img/travel1.png' %}">
+					    </div>
+					   	<div class='slides'>
+					      <img src="{% static 'img/travel2.png' %}">
+					    </div>
+					    <div class='slides'>
+					      <img src="{% static 'img/tasks.png' %}">
+					    </div>
+					    <div class='slides'>
+					      <img src="{% static 'img/draw.png' %}">
+					    </div>
+					    <div class='slides'>
+					      <img src="{% static 'img/create.png' %}">
+					    </div>
+					    <div class='slides'>
+					      <img src="{% static 'img/cats.png' %}">
+					    </div>
+					    <div class='slides'>
+					      <img src="{% static 'img/sport.png' %}">
+					    </div>
+					    <div class='slides'>
+					      <img src="{% static 'img/oh.png' %}">
+					    </div>
+					    <div class='slides'>
+					      <img src="{% static 'img/diplom.png' %}">
+					    </div>
+					    <div class='slides'>
+					      <img class='pb-2' src="{% static 'img/proj.png' %}">
+					    </div>
+					    <div class='slides'>
+					      <img src="{% static 'img/speak.png' %}">
+					    </div>
+					    <div class='slides'>
+					      <img src="{% static 'img/speak1.png' %}">
+					    </div>
+					  </div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section> 
+
+	<section class='brick_bg py-5'> 
+		<div class='w-80'>
+			<div id='contact' class='white'>
+				<h2 class='white'>Связаться</h1>
+				<p class='py-4'>→   Пишите в телеграм <b><a class='white' href='https://t.me/anna_book'>@anna_book</a></b></p>
+				
+			</div>
+		</div>
+	</section> 
+
+{% endblock %}
