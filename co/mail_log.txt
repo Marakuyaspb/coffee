@@ -219,3 +219,5 @@ AttributeError: 'CallMeForm' object has no attribute 'save'
 2024-10-15 11:33:16,442 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
 2024-10-15 11:33:31,604 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
 2024-10-15 11:33:45,795 - Mail to manager sent successfully!!!
+2024-10-15 11:36:36,012 - /media/aa/A/coffee/co/main/admin.py changed, reloading.
+2024-10-15 11:37:17,279 - /media/aa/A/coffee/co/main/admin.py changed, reloading.
