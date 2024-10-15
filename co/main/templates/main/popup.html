@@ -1,0 +1,40 @@
+{% load static %}
+
+<div class='modal_container' onclick='showModal(this);'>
+    
+  <div class='thumb button_form_base'>Хочу, чтобы мне перезвонили</div>
+
+    <div class='modal_full hide'>  
+      <div class=''>
+
+        <div class='d-flex flex-row-reverse pe-3'>
+          <span class="close" onclick="closeModal(this);">&times;</span>
+        </div>
+        
+        <form method="post" class="callme_container white_bg">
+          <center><img class='popup_big_logo' src='{% static "coffeedrink.png" %}'></center>
+
+          <div class='form_container brown we_300'>
+            
+            {% csrf_token %}
+
+
+            <label for="{{ callme_form.first_name.id_for_label }}">{{ callme_form.first_name.label }}</label>
+		    {{ callme_form.first_name }}
+
+		    <label for="{{ callme_form.phone.id_for_label }}">{{ callme_form.phone.label }}</label>
+		    {{ callme_form.phone }}
+
+		    <label for="{{ callme_form.message.id_for_label }}">{{ callme_form.message.label }}</label>
+		    {{ callme_form.message }}
+		    
+          
+          <center class='py-3'><input type="submit" value="Хочу, чтобы мне перезвонили" class="brick_bg white"></center>
+
+          <p class='pt-3 brick small'>* Нажимая на кнопку "Хочу, чтобы мне перезвонили", Вы соглашаетесь с <u><a class='brick' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>

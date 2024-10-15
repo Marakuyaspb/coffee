@@ -120,3 +120,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# Email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mail.ru'  
+EMAIL_PORT = 587  # or 465 for SSL
+EMAIL_USE_TLS = False
+EMAIL_HOST_USER = str(os.getenv('YANDEX_APP_MAIL'))
+EMAIL_HOST_PASSWORD = str(os.getenv('YANDEX_APP_PASSWORD'))
+
+# Celery Configuration
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'

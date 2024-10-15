@@ -14,7 +14,7 @@
 	</section>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-	<script src="{% static 'script.js' %}"></script>
+	<script src="{% static 'js/script.js' %}"></script>
 
 
 	<section class='white_bg'>
@@ -211,8 +211,11 @@
 		<div class='w-80'>
 			<div id='contact' class='white'>
 				<h2 class='white'>Связаться</h1>
-				<p class='py-4'>→   Пишите в телеграм <b><a class='white' href='https://t.me/anna_book'>@anna_book</a></b></p>
+				<p class='py-4 tg_link'>→   Пишите в телеграм <b><a class='tg_link white' href='https://t.me/anna_book'>@anna_book</a></b></p>
 				
+				<section>
+					{% include 'main/popup.html' %}
+				</section>
 			</div>
 		</div>
 	</section> 

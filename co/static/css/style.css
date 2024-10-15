@@ -129,6 +129,14 @@ footer a:hover{
 }
 
 
+tg_link{
+  color: #fffaf0!important;
+}
+tg_link:hover{
+  color: #eb8f69!important;
+}
+
+
 h1 span {
   display: block;
 }
@@ -152,7 +160,6 @@ h1 span {
 .turqudark_bg{
   background-color: #0a5455;
 }
-
 .white_bg{
   background-color: #fffaf0!important;
 }
@@ -399,4 +406,102 @@ footer{
 }
 #wedding{
   background-image: url(https://coffeeinveins.ru/static/site_icons/site_wedding.png);
+}
+
+
+
+/*  MODAL WINDOW  */
+
+.modal_full{
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5)!important;
+}
+
+.form_container{
+  padding: 2em 2em 1em 2em;
+
+}
+
+.popup_big_logo{
+  max-width: 16em;
+  margin: 3em auto 2em auto;
+}
+
+input{
+  border-radius: 8px;
+  border: 1px solid #391c0b;
+  padding: .3em .5em;
+  width: 100%!important;
+}
+
+textarea{
+  border-radius: 8px;
+  border: 1px solid #391c0b;
+  padding: .3em .5em;
+  width: 100%!important;
+}
+
+
+.thumb {
+  display: block;
+ }
+
+.hide {
+    display: none;
+}
+
+.block {
+    display: block;      
+}
+
+.button_form_base{
+  border-radius: 8px;
+  border: 1px #fffaf0 solid;
+  font-size: 1em;
+  padding: 8px 12px;
+  width: max-content;
+}
+
+
+
+
+@media (min-width: 811px){
+  .callme_container{
+    margin-top: 7em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    border-radius: 8px;
+  }
+  .close {
+    color: #A3A2A2;
+    position: relative;
+    font-size: 60px;
+    font-weight: 100;
+    transition: 0.3s;
+    z-index: 222;
+  }
+}
+
+@media (max-width: 810px) {
+  .callme_container{
+    border-radius: 8px;
+    width: 100vw;
+  }
+  .close {
+    color: #A3A2A2;
+    position: absolute;
+    font-size: 80px;
+    font-weight: 100;
+    transition: 0.3s;
+    z-index: 222;
+  }
+
 }

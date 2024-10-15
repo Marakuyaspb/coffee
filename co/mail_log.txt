@@ -1,0 +1,221 @@
+2024-10-15 07:12:10,554 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
+2024-10-15 07:24:17,862 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 19, in handle_callme_form
+    callme = CallMe(
+NameError: name 'CallMe' is not defined
+2024-10-15 07:24:51,190 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
+2024-10-15 07:25:19,535 - /media/aa/A/coffee/co/main/models.py changed, reloading.
+2024-10-15 07:25:53,209 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 24, in handle_callme_form
+    callme_created.delay(callme.id)
+NameError: name 'callme_created' is not defined
+2024-10-15 07:26:10,334 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 24, in handle_callme_form
+    callme_created.delay(callme.id)
+NameError: name 'callme_created' is not defined
+2024-10-15 07:26:51,193 - /media/aa/A/coffee/co/main/tasks.py changed, reloading.
+2024-10-15 07:26:58,243 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 07:27:04,177 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 24, in handle_callme_form
+    send_email.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 559, in apply_async
+    check_arguments(*(args or ()), **(kwargs or {}))
+TypeError: send_email() missing 2 required positional arguments: 'email' and 'message'
+2024-10-15 07:28:10,081 - /media/aa/A/coffee/co/main/views.py changed, reloading.
+2024-10-15 07:29:06,197 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 24, in handle_callme_form
+    send_email.delay(callme.id)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/aa/.local/lib/python3.10/site-packages/celery/app/task.py", line 559, in apply_async
+    check_arguments(*(args or ()), **(kwargs or {}))
+TypeError: send_email() missing 2 required positional arguments: 'email' and 'message'
+2024-10-15 07:30:46,164 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 08:05:44,824 - /media/aa/A/coffee/co/main/views.py changed, reloading.
+2024-10-15 08:09:07,798 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 08:10:39,608 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 08:11:04,895 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 08:11:24,818 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 25, in handle_callme_form
+    first_name=callme_form.cleaned_data.get['first_name'],
+TypeError: 'builtin_function_or_method' object is not subscriptable
+2024-10-15 08:11:41,439 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 08:11:45,455 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 25, in handle_callme_form
+    first_name=callme_form.cleaned_data.get['first_name'],
+TypeError: 'builtin_function_or_method' object is not subscriptable
+2024-10-15 08:15:04,159 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 08:17:15,756 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 08:18:41,348 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 19, in handle_callme_form
+    callme_order = callme.save()
+NameError: name 'callme' is not defined
+2024-10-15 08:19:05,880 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 08:19:09,577 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 19, in handle_callme_form
+    callme_order = callme_form.save()
+AttributeError: 'CallMeForm' object has no attribute 'save'
+2024-10-15 10:34:49,146 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 19, in handle_callme_form
+    callme_order = callme_form.save()
+AttributeError: 'CallMeForm' object has no attribute 'save'
+2024-10-15 11:07:12,689 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
+2024-10-15 11:11:06,468 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 19, in handle_callme_form
+    callme_order = callme_form.save()
+AttributeError: 'CallMeForm' object has no attribute 'save'
+2024-10-15 11:12:39,738 - /media/aa/A/coffee/co/main/models.py changed, reloading.
+2024-10-15 11:12:58,967 - /media/aa/A/coffee/co/main/models.py changed, reloading.
+2024-10-15 11:13:24,261 - /media/aa/A/coffee/co/main/models.py changed, reloading.
+2024-10-15 11:13:30,324 - /media/aa/A/coffee/co/main/models.py changed, reloading.
+2024-10-15 11:15:14,513 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
+2024-10-15 11:15:34,728 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
+2024-10-15 11:16:28,413 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 19, in handle_callme_form
+    callme_order = callme_form.save()
+AttributeError: 'CallMeForm' object has no attribute 'save'
+2024-10-15 11:16:55,646 - /media/aa/A/coffee/co/main/models.py changed, reloading.
+2024-10-15 11:17:32,950 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 19, in handle_callme_form
+    callme_order = callme_form.save()
+AttributeError: 'CallMeForm' object has no attribute 'save'
+2024-10-15 11:18:31,965 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
+2024-10-15 11:19:14,452 - /media/aa/A/coffee/co/main/models.py changed, reloading.
+2024-10-15 11:19:18,495 - /media/aa/A/coffee/co/main/models.py changed, reloading.
+2024-10-15 11:19:35,733 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 19, in handle_callme_form
+    callme_order = callme_form.save()
+AttributeError: 'CallMeForm' object has no attribute 'save'
+2024-10-15 11:22:05,745 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 11:22:44,743 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 19, in handle_callme_form
+    callme_order = callme_form.save()  # This will save the form data to the database
+AttributeError: 'CallMeForm' object has no attribute 'save'
+2024-10-15 11:22:53,636 - Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/aa/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/media/aa/A/coffee/co/main/views.py", line 8, in index
+    callme_form = handle_callme_form(request)
+  File "/media/aa/A/coffee/co/main/form_generator.py", line 19, in handle_callme_form
+    callme_order = callme_form.save()  # This will save the form data to the database
+AttributeError: 'CallMeForm' object has no attribute 'save'
+2024-10-15 11:26:55,734 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 11:27:02,800 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 11:27:49,360 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 11:28:06,541 - /media/aa/A/coffee/co/main/form_generator.py changed, reloading.
+2024-10-15 11:29:43,757 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
+2024-10-15 11:30:04,016 - /media/aa/A/coffee/co/main/models.py changed, reloading.
+2024-10-15 11:30:24,096 - Not Found: /favicon.ico
+2024-10-15 11:33:16,442 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
+2024-10-15 11:33:31,604 - /media/aa/A/coffee/co/main/forms.py changed, reloading.
+2024-10-15 11:33:45,795 - Mail to manager sent successfully!!!
