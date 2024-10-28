@@ -1,6 +1,7 @@
 from pathlib import Path
 import os, sys
 from dotenv import load_dotenv
+from celery import Celery
 from django.contrib.messages import constants as messages
 
 env_path = Path('.') / '.env'
@@ -27,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'main.apps.MainConfig'
+
 ]
 
 MIDDLEWARE = [
@@ -122,14 +124,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+CELERY_TIMEZONE = 'UTC'
+CELERY_TASK_TRACK_STARTED = True
+
 
 # Email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.mail.ru'  
-EMAIL_PORT = 587  # or 465 for SSL
+EMAIL_HOST = 'smtp.timeweb.ru'  
+EMAIL_PORT = 465  # 465 for SSL | 587 for TLS
+EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
-EMAIL_HOST_USER = str(os.getenv('YANDEX_APP_MAIL'))
-EMAIL_HOST_PASSWORD = str(os.getenv('YANDEX_APP_PASSWORD'))
+EMAIL_HOST_USER = str(os.getenv('TW_MAIL'))
+EMAIL_HOST_PASSWORD = str(os.getenv('TW_PASSWORD'))
 
 # Celery Configuration
 CELERY_BROKER_URL = 'redis://localhost:6379/0'

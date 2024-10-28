@@ -1,0 +1,8 @@
+Localhost:
+
+python3 manage.py runserver
+
+redis-server
+redis-cli ping
+
+celery -A co worker -l info

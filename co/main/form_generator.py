@@ -17,23 +17,13 @@ def handle_callme_form(request):
         if callme_form.is_valid():
             callme_order = callme_form.save()
 
-            context = {
-                'callme_order': callme_order,
-            }
+            name = callme_order.first_name
+            phone = callme_order.phone 
+            message = callme_order.message
 
-            try:
-                send_mail(
-                    'New message',
-                    'Ni!!',
-                    settings.EMAIL_HOST_USER,
-                    ['komy.kabachok@yandex.ru'],
-                    fail_silently=True,
-                    html_message=loader.get_template('main/mail.html').render(context)
-                )
-                logging.info("Mail to manager sent successfully!!!")
-            except Exception as e:
-                logging.error(f"Error sending mail to: {str(e)}")
-
+            # Call the Celery task
+            send_email.delay(name, phone, message)
+            
             return callme_form
     else:
         callme_form = CallMeForm()
