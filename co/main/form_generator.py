@@ -24,6 +24,9 @@ def handle_callme_form(request):
             # Call the Celery task
             send_email.delay(name, phone, message)
             
+            print(os.getenv('YANDEX_APP_MAIL'))
+            print(os.getenv('YANDEX_APP_PASSWORD'))
+            
             return callme_form
     else:
         callme_form = CallMeForm()
