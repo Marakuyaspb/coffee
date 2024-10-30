@@ -1,5 +1,8 @@
+.env
+
 imgs/*
 imgs/all/*
 
 works/*
 works/site_icons/*
+.env

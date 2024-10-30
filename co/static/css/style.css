@@ -429,10 +429,7 @@ footer{
 
 }
 
-.popup_big_logo{
-  max-width: 16em;
-  margin: 0 auto 2em auto;
-}
+
 
 input{
   border-radius: 8px;
@@ -502,12 +499,17 @@ textarea{
     border-radius: 8px;
   }
   .close {
-    color: #A3A2A2;
+    color: #eb8f69;;
     position: relative;
     font-size: 60px;
     font-weight: 100;
     transition: 0.3s;
     z-index: 222;
+    margin-top: -.2em;
+  }
+  .popup_big_logo{
+    max-width: 16em;
+    margin: 0 auto 2em auto;
   }
 }
 
@@ -517,12 +519,16 @@ textarea{
     width: 100vw;
   }
   .close {
-    color: #A3A2A2;
+    color: #eb8f69;;
     position: absolute;
     font-size: 80px;
     font-weight: 100;
     transition: 0.3s;
     z-index: 222;
+    margin-top: .2em;
   }
-
+  .popup_big_logo{
+    max-width: 16em;
+    margin: 6em auto 1em auto;
+  }
 }
