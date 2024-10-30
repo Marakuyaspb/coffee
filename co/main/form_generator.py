@@ -8,7 +8,7 @@ from .forms import *
 from .models import *
 from .tasks import * 
 
-logging.basicConfig(filename='mail_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(filename='logs/mail_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 
 def handle_callme_form(request):
@@ -16,16 +16,13 @@ def handle_callme_form(request):
         callme_form = CallMeForm(request.POST)
         if callme_form.is_valid():
             callme_order = callme_form.save()
-
-            name = callme_order.first_name
-            phone = callme_order.phone 
-            message = callme_order.message
-
             # Call the Celery task
-            send_email.delay(name, phone, message)
-            
-            print(os.getenv('YANDEX_APP_MAIL'))
-            print(os.getenv('YANDEX_APP_PASSWORD'))
+            send_email.delay(
+                callme_order.first_name, 
+                callme_order.phone, 
+                callme_order.message
+            ) 
+            print(os.getenv('TW_MAIL'))
             
             return callme_form
     else:
