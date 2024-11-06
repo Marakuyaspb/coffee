@@ -7,8 +7,8 @@ logger = logging.getLogger(__name__)
 
 @shared_task
 def send_email(name, phone, message):
-    subject = f"Contact Form Submission from {name}"
-    body = f"Name: {name}\nPhone: {phone}\nMessage:\n{message}"
+    subject = f"С сайта coffeeinveins пишет {name}"
+    body = f"Имя: {name}\n\nТелефон: {phone}\n\nСообщение:\n{message}"
     recipient_list = ['to.the.neizvestnost@yandex.ru']
 
     try:

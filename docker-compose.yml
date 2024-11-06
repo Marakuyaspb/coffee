@@ -1,11 +1,90 @@
 version: '3.8'
 
+x-environment-defaults: &environment-defaults
+  DEBUG: "False"
+  CELERY_BROKER_URL: "redis://redis:6379/0"
+  CELERY_RESULT_BACKEND: "redis://redis:6379/0"
+
 services:
-  web:
+  co:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "8000:8000"
+    container_name: co
+    environment:
+      <<: *environment-defaults
     volumes:
       - ./co:/co
+    ports:
+      - "8000:8000"
+    restart: on-failure:5
+    networks:
+      - prediction-network
+    depends_on:
+      - postgres-db
+
+
+  postgres-db:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: coffee-db
+      POSTGRES_USER: cacao
+      POSTGRES_PASSWORD: Tut56StaryhMelnits!
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - prediction-network
+
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - "6380:6379"
+    restart: on-failure:5
+    networks:
+      - prediction-network
+
+
+  celery:
+    build:
+      context: .
+    command: celery -A co worker --loglevel=info
+    container_name: celery
+    environment:
+      <<: *environment-defaults
+    depends_on:
+      - redis
+    volumes:
+      - ./co:/co
+    networks:
+      - prediction-network
+
+  
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    volumes:
+      - ./conf/nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl/:/etc/nginx/ssl/
+      - static_volume:/static
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - prediction-network
+    depends_on:
+      - co
+    command: ["/bin/sh", "-c", "chown -R nginx:nginx /static && exec nginx -g 'daemon off;'"]
+
+volumes:
+  pg_data:
+  static_volume:
+
+
+networks:
+  prediction-network:
+    driver: bridge
