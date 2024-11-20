@@ -1,0 +1,12 @@
+FROM ubuntu:22.04
+
+EXPOSE 6000 80
+
+WORKDIR /certbot
+COPY . /certbot
+
+RUN apt-get update
+RUN apt-get -y install certbot
+
+RUN chmod +x /certbot/generate-certificate.sh
+CMD ["sh", "generate-certificate.sh"]

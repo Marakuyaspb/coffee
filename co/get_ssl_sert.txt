@@ -1,0 +1,4 @@
+openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes \
+-keyout ssl/co.key -out ssl/co.crt \
+-subj '/CN=*.coffeeinveins.ru' \
+-addext 'subjectAltName=DNS:*.coffeeinveins.ru'

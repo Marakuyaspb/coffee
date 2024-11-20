@@ -8,3 +8,4 @@ works/site_icons/*
 .env
 
 staticfiles
+ssl/*
