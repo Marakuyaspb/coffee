@@ -3,12 +3,12 @@ version: '3.8'
 x-environment-defaults: &environment-defaults
   DEBUG: "False"
   DB_NAME: "coffee-db"
-  DB_USER: "**"
-  DB_PASSWORD: "***!"
+  DB_USER: "*****"
+  DB_PASSWORD: "****!"
   DB_HOST: "postgres"
   DB_PORT: 5432
-  TW_MAIL: "partners@****"
-  TW_PASSWORD: "****!"
+  TW_MAIL: "partners@***"
+  TW_PASSWORD: "******!"
   CELERY_BROKER_URL: "redis://redis:6379/0"
   CELERY_RESULT_BACKEND: "redis://redis:6379/0"
 
@@ -24,21 +24,21 @@ services:
       - ./co:/co
     ports:
       - "8000:8000"
-    restart: on-failure:5
-    networks:
-      - coffee-network
     depends_on:
       - postgres
       - redis
       - celery
+    restart: on-failure:5
+    networks:
+      - coffee-network
 
   postgres:
     image: postgres:latest
     container_name: postgres_co
     environment:
       POSTGRES_DB: coffee-db
-      POSTGRES_USER: *****
-      POSTGRES_PASSWORD: ****!
+      POSTGRES_USER: ******
+      POSTGRES_PASSWORD: *****!
     ports:
       - "5432:5432"
     volumes:
@@ -71,12 +71,14 @@ services:
 
   nginx:
     image: nginx:1.23.3
-    container_name: nginx
+    container_name: nginx_co
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/cert.pem:/etc/cert.pem
+      - ./nginx/key.pem:/etc/key.pem
+      - ./certbot/www:/var/www/certbot
       - static_volume:/static
       - media_volume:/media
-      - ./ssl:/etc/ssl
     ports:
       - "80:80"
       - "443:443"
@@ -86,6 +88,19 @@ services:
       - co
     command: ["/bin/sh", "-c", "chown -R nginx:nginx /static && exec nginx -g 'daemon off;'"]
 
+
+  certbot:
+    build:
+      context: ./certbot
+      dockerfile: Dockerfile.certbot
+    container_name: certbot_co
+    ports:
+      - "6000:80"
+    networks:
+      - coffee-network
+    volumes:
+      - ./nginx/:/etc/nginx/
+      - ./certbot/www:/var/www/certbot
 
 volumes:
   pg_data:
